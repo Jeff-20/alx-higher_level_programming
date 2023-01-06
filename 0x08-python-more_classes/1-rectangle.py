@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+This Rectangle class defines a rectangle with width and height attributes
+"""
+
+
 class Rectangle:
+    """Rectangle class with width and height attributes"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height

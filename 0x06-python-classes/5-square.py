@@ -35,3 +35,6 @@ class Square:
         """Prints square with # character to the standard output"""
         for i in range(self.__size):
             print("#" * self.__size)
+
+        if self.__size == 0:
+            print("")

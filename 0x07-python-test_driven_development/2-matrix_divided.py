@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 
+"""This module defines 'matrix_divided' function
+    that divides all elements of a matrix
+"""
 
 def matrix_divided(matrix, div):
+    """Divides all elements of a matrix"""
     new_mat = []
     new_list = []
     try:

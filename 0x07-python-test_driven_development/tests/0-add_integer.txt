@@ -1,7 +1,7 @@
-The ``example`` module
+The ``0-add_integer`` module
 ======================
 
-Using ``factorial``
+Using ``add_integer``
 -------------------
 
 This is an example text file in reStructuredText format.  First import
@@ -11,4 +11,32 @@ This is an example text file in reStructuredText format.  First import
 
 Now use it:
 
-    >>> 
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(100.3, -3.1)
+    98
+
+   >>> add_integer(hello, 1)
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+	>>> add_integer(1, hello)
+	Traceback (most recent call last):
+	    ...
+	TypeError: b must be an integer
+
+	>>> add_integer(hello, hello)
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer 

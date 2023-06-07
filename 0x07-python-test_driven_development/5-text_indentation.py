@@ -2,7 +2,7 @@
 
 
 def text_indentation(text):
-    
+
     new_text = ""
     flag = False
 
@@ -20,7 +20,7 @@ def text_indentation(text):
             flag = True
 
         else:
-            if flag == False:
+            if flag is False:
                 print(char, end="")
 
             else:

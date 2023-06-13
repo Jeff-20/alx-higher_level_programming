@@ -1,0 +1,67 @@
+The ``7-base_geometry`` module
+============================
+
+Using ``BaseGeometry``
+----------------------
+
+This is an example text file in reStructuredText format.
+First import ``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Now use it:
+
+    >>> bg = BaseGeometry()
+    >>> type(bg)
+    <class '7-base_geometry.BaseGeometry'>
+
+
+This class should define 2 functions
+
+``area``
+    >>> 'area' in dir(BaseGeometry)
+    True
+
+``integer_validator``
+    >>> 'integer_validator' in dir(BaseGeometry)
+    True
+
+Should test publicity of methods ?
+
+And no instance attributes or methods
+    >>> dir(bg) == dir(BaseGeometry)
+    True
+
+Test ``area``
+-------------
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+Test ``integer_validator``
+--------------------------
+2 arguments should be supplied
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator(1)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+    >>> bg.integer_validator(1, 2, 3)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+sign testing
+     >>> bg.integer_validator("name", -23)
+     Traceback (most recent call last):
+     ValueError: name must be greater than 0
+
+     >>> bg.integer_validator("name", 0)
+     Traceback (most recent call last):
+     ValueError: name must be greater than 0
+
+it does not return anything on success
+     >>> bg.integer_validator("name", 3)

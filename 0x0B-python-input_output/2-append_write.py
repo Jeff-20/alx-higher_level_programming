@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+"""This module defines function 'append_write'
+    that appends a string to a text file (UTF8)
+    and returns the number of characters added
+"""
+
+
+def append_write(filename="", text=""):
+    """Appends string 'text' to text file 'filename'
+        and returns the number of characters added
+    """
+    with open(filename, 'a', encoding='utf-8') as f:
+        return f.write(text)

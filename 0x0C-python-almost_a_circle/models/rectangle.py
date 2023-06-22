@@ -105,3 +105,8 @@ class Rectangle(Base):
             for i in range(self.__width):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        """Overridden str"""
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
+ {self.__width}/{self.__height}")

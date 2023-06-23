@@ -41,6 +41,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def update(self, *args):
+        """Assigns an argument to each attribute below"""
         try:
             self.id = args[0]
             self.__width = args[1]

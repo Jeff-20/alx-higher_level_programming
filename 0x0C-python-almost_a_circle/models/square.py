@@ -39,7 +39,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Assigns attributes"""
         try:
-            if args is not None:
+            if args:
                 self.id = args[0]
                 self.size = args[1]
                 self.__x = args[2]

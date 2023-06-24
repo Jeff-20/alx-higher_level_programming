@@ -139,3 +139,10 @@ class Rectangle(Base):
         """Overridden str"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
  {self.__width}/{self.__height}")
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of class 'Rectangle'
+        """
+        obj = (Rectangle(self.__width, self.__height, self.__x,
+                         self.__y, self.id))
+        return obj.__dict__

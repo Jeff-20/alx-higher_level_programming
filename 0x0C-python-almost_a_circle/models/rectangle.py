@@ -40,16 +40,29 @@ class Rectangle(Base):
 
         super().__init__(id)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to each attribute below"""
+
         try:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+            if args is not None:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
         except IndexError:
             pass
+        finally:
+            if kwargs.get('id'):
+                self.id = kwargs['id']
+            if kwargs.get('width'):
+                self.__width = kwargs['width']
+            if kwargs.get('height'):
+                self.__height = kwargs['height']
+            if kwargs.get('x'):
+                self.__x = kwargs['x']
+            if kwargs.get('y'):
+                self.__y = kwargs['y']
 
     @property
     def width(self):

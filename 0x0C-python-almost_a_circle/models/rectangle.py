@@ -135,14 +135,14 @@ class Rectangle(Base):
                 print("#", end="")
             print("")
 
+    def to_dictionary(self):
+        """returns dictionary representation of class 'Rectangle'
+        """
+        obj = {'width': self.__width, 'height': self.__height, 'x': self.__x,
+               'y': self.__y, 'id': self.id}
+        return obj
+
     def __str__(self):
         """Overridden str"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
  {self.__width}/{self.__height}")
-
-    def to_dictionary(self):
-        """Returns the dictionary representation of class 'Rectangle'
-        """
-        obj = (Rectangle(self.__width, self.__height, self.__x,
-                         self.__y, self.id))
-        return obj.__dict__

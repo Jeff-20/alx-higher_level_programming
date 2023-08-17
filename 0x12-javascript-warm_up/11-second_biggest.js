@@ -1,21 +1,14 @@
 #!/usr/bin/node
 // searches for second biggest int in the arguments list and prints it
 
-function secondHigh (argList) {
-  if (argList.length === 2 || argList.length === 3) { return (0); }
+const args = process.argv.slice(2).map((x) => {
+  return parseInt(x);
+});
 
-  let highest = argList[2];
-  let secHighest = argList[3];
-
-  for (let i = 2; i < argList.length; i++) {
-    if (argList[i] > highest) {
-      secHighest = highest;
-      highest = argList[i];
-    } else if (argList[i] > secHighest && argList[i] < highest) {
-      secHighest = argList[i];
-    }
-  }
-  return (secHighest);
+if (args.length <= 1) {
+  console.log(0);
+} else {
+  console.log(args.sort((a, b) => {
+    return b - a;
+  })[1]);
 }
-
-console.log(secondHigh(process.argv));

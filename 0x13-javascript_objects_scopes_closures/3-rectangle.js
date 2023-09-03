@@ -8,14 +8,15 @@ class Rectangle {
       this.height = h;
     }
   }
-  print() {
+
+  print () {
+    let storeX = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
-        console.log('X');
-        if (j = this.width - 1) {
-          console.log(\n);
-        }
+        storeX += 'X';
       }
+      console.log(storeX);
+      storeX = '';
     }
   }
 }

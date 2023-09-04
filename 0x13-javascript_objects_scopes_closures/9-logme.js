@@ -2,10 +2,8 @@
 // Defines a function that prints the number of arguments
 // already printed and the new argument value
 
-exports.logMe = function (item){
-    let count = 0;
-    console.log(count: item)
-    if (item != item){
-        count += 1;
-    }
-}
+let count = 0;
+exports.logMe = function (item) {
+  console.log(count + ':' + item);
+  count += 1;
+};

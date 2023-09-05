@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Contains definition of class 'State' and an instance
-   Base = declarative_base()
 """
 
 import sys

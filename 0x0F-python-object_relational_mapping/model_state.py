@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Contains definition of class 'State' and an instance
+"""This script contains definition of class 'State' and an instance
 """
 
 import sys
